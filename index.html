@@ -162,9 +162,7 @@
     text:  '<path d="M4 7V5h16v2M9 19h6M12 5v14"/>',
     diff:  '<path d="M8 3v12M5 12l3 3 3-3M16 21V9M13 12l3-3 3 3"/>',
     image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',
-    pin:   '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><path d="M4 4l16 16"/>',
-    cal:   '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
-    era:   '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>'
+    pin:   '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><path d="M4 4l16 16"/>'
   };
   const GROUPS = [
     { name: "PDF", tools: [
@@ -178,10 +176,6 @@
     { name: "画像", tools: [
       { id: "image-resize", icon: "image", name: "画像の縮小・圧縮", desc: "メールやサイトに上げられるサイズに小さくする", input: "画像ファイル" },
       { id: "exif-remove", icon: "pin", name: "写真の位置情報を消す", desc: "撮影場所などの情報を消してから人に渡す", input: "写真" }
-    ]},
-    { name: "日付・計算", tools: [
-      { id: "business-days", icon: "cal", name: "営業日の計算", desc: "土日・祝日を除いて「○営業日後」を出す", input: "日付" },
-      { id: "wareki", icon: "era", name: "和暦・西暦の変換", desc: "年齢や期間の計算もあわせて", input: "日付" }
     ]}
   ];
   const ALL = GROUPS.flatMap(g => g.tools.map(t => ({ ...t, group: g.name })));
