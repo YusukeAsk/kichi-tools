@@ -1,1 +1,101 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>仕事の便利ツール｜無料・登録不要・ファイルは外に送りません</title>
+<meta name="description" content="PDFの結合やCSVの文字化け直しなど、仕事でよく使う道具を集めました。どの道具も、ファイルをあなたのブラウザの中だけで処理します。">
+<style>
+  :root {
+    --bg: #f5f6f4;
+    --card: #ffffff;
+    --ink: #22262a;
+    --sub: #6b737a;
+    --line: #dfe3e6;
+    --accent: #2f6f5e;
+    --accent-soft: #e3efea;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #171a1c; --card: #1f2326; --ink: #e8ebed; --sub: #9aa3aa;
+      --line: #32383c; --accent: #6fb39f; --accent-soft: #23312d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Hiragino Sans", "Yu Gothic UI", "Meiryo", sans-serif;
+    line-height: 1.8;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 16px 64px; }
 
+  header { text-align: center; }
+  .mark {
+    width: 56px; height: 56px; margin: 0 auto 18px;
+    display: grid; place-items: center;
+    background: var(--accent-soft); color: var(--accent); border-radius: 16px;
+  }
+  h1 { font-size: 26px; font-weight: 700; letter-spacing: .06em; }
+  .lead { margin-top: 12px; color: var(--sub); font-size: 15px; }
+  .promise {
+    display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+    margin-top: 20px; list-style: none;
+  }
+  .promise li {
+    padding: 4px 14px; border-radius: 99px;
+    background: var(--accent-soft); color: var(--accent); font-size: 13px; font-weight: 600;
+  }
+
+  h2 {
+    margin: 52px 0 16px; font-size: 14px; color: var(--sub);
+    letter-spacing: .2em; font-weight: 600;
+  }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; list-style: none; }
+  .tool {
+    display: block; height: 100%;
+    padding: 18px 18px 16px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 12px;
+    color: inherit; text-decoration: none;
+  }
+  .tool b { display: block; font-size: 16px; }
+  .tool span { display: block; margin-top: 4px; color: var(--sub); font-size: 13px; line-height: 1.6; }
+  .tool em {
+    display: inline-block; margin-top: 10px; padding: 1px 10px; border-radius: 99px;
+    border: 1px dashed var(--line); color: var(--sub); font-size: 12px; font-style: normal;
+  }
+  .note { margin-top: 48px; color: var(--sub); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="mark" aria-hidden="true">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg>
+    </div>
+    <h1>仕事の便利ツール</h1>
+    <p class="lead">PDFの結合やCSVの文字化け直しなど、<br>仕事でよく使う道具を少しずつ集めています。</p>
+    <ul class="promise">
+      <li>無料</li>
+      <li>登録不要</li>
+      <li>ファイルは外に送りません</li>
+    </ul>
+  </header>
+
+  <h2>道具箱</h2>
+  <ul class="grid">
+    <li><div class="tool"><b>PDFの結合</b><span>複数のPDFを1つにまとめる。並べ替え・ページ削除も</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>CSVの文字化け直し</b><span>Shift_JIS と UTF-8 を変換して、Excelでも文字化けしないCSVに</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>全角・半角のそろえ直し</b><span>英数字・カナ・空白・改行をまとめて整える</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>営業日の計算</b><span>土日・祝日を除いて「○営業日後」を出す</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>画像の縮小・圧縮</b><span>メールやサイトに上げられるサイズに小さくする</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>写真の位置情報を消す</b><span>撮影場所などの情報を消してから人に渡す</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>文章の差分チェック</b><span>2つの文章の違うところを色分けして見せる</span><em>工事中</em></div></li>
+    <li><div class="tool"><b>和暦・西暦の変換</b><span>年齢や期間の計算もあわせて</span><em>工事中</em></div></li>
+  </ul>
+
+  <p class="note">どの道具も、ファイルはあなたのブラウザの中だけで処理します。</p>
+
+</div>
+</body>
+</html>
