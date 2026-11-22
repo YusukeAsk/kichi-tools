@@ -22,6 +22,15 @@ function loadPdfjs() {
 const COLORS = ["#2f6f5e", "#b5651d", "#3b6ea5", "#8e4585", "#6b8e23", "#a33d3d", "#4a6670", "#b08d1a"];
 
 const CSS = `
+.pm-how { margin-bottom: 16px; }
+.pm-steps { list-style: none; counter-reset: st; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.pm-steps li { counter-increment: st; position: relative; padding: 10px 12px 10px 44px; border-radius: 6px; background: var(--accent-soft); line-height: 1.5; }
+.pm-steps li::before { content: counter(st); position: absolute; left: 12px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; display: grid; place-items: center; border-radius: 99px; background: var(--accent); color: #fff; font-size: 12px; font-weight: 700; }
+.pm-steps b { display: block; font-size: 13px; }
+.pm-steps span { display: block; font-size: 12px; color: var(--sub); }
+.pm-steps em { font-style: normal; font-weight: 700; color: var(--ink); }
+.pm-how-note { margin-top: 10px; font-size: 12px; color: var(--sub); line-height: 1.7; }
+.pm-how-note b { color: var(--ink); }
 .pm-drop { margin-top: 0; cursor: pointer; transition: border-color .15s, background .15s; }
 .pm-drop:hover, .pm-drop.over { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); }
 .pm-drop b { color: var(--accent); }
@@ -65,6 +74,7 @@ const CSS = `
   .pm-name input { width: 140px; }
   .pm-bar .sp { display: none; }
   .pm-wide { display: none; }
+  .pm-steps { grid-template-columns: 1fr; }
 }
 `;
 
@@ -102,6 +112,14 @@ export function mount(root) {
 
   // ---- 画面 ----
   root.innerHTML = `
+    <div class="pm-how">
+      <ol class="pm-steps">
+        <li><b>PDFを入れる</b><span>まとめたいPDFを2つ以上入れる</span></li>
+        <li><b>順番を決める</b><span>ページの並べ替えや、いらないページを外す</span></li>
+        <li><b>ダウンロード</b><span>全部をつなげた<em>新しいPDFが1つ</em>できる</span></li>
+      </ol>
+      <p class="pm-how-note">例：「見積書.pdf」（3ページ）と「請求書.pdf」（2ページ）を入れると、5ページの「見積書_結合.pdf」ができます。<b>元のPDFはそのまま残り、書き換えられません。</b>ファイルはこのブラウザの中だけで処理し、どこにも送りません。</p>
+    </div>
     <div class="drop pm-drop" tabindex="0" role="button">
       <div><b>PDFをここにドラッグ</b>、または<b>クリックして選ぶ</b></div>
       <div class="pm-note">複数まとめて選べます。あとから追加もできます。</div>
