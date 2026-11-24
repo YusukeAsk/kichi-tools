@@ -167,6 +167,8 @@
     image: '<rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-9 9"/>',
     resize:  '<path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>',
     convert: '<path d="M4 8h14l-3-3M20 16H6l3 3"/>',
+    filter: '<path d="M3 5h18l-7 8v6l-4 2v-8z"/>',
+    regex: '<path d="M17 3v10M12.7 5.5l8.6 5M12.7 10.5l8.6-5"/><rect x="3" y="15" width="6" height="6" rx="1"/>',
     pin:   '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><path d="M4 4l16 16"/>'
   };
   const GROUPS = [
@@ -175,6 +177,8 @@
       { id: "pdf-split", icon: "split", name: "PDFの分割", desc: "ページ数ごとやページ指定で、1つのPDFをいくつかに分ける", input: "PDFファイル", ready: true }
     ]},
     { name: "データ・文章", tools: [
+      { id: "regex", icon: "regex", name: "よく使う正規表現", desc: "選ぶと、文章の当てはまる所が光る。置換前・置換後と読み方つきの辞書", input: "文章", ready: true },
+      { id: "csv-filter", icon: "filter", name: "CSVの行の絞り込み", desc: "指定した文字を含む行を消す／含む行だけ残す。列の指定もできる", input: "CSVファイル", ready: true },
       { id: "csv-encoding", icon: "csv", name: "CSVの文字化け直し", desc: "Shift_JIS と UTF-8 を変換して、Excelでも文字化けしないCSVに", input: "CSVファイル" },
       { id: "zenkaku", icon: "text", name: "全角・半角のそろえ直し", desc: "英数字・カナ・空白・改行をまとめて整える", input: "文章" },
       { id: "diff", icon: "diff", name: "文章の差分チェック", desc: "2つの文章の違うところを色分けして見せる", input: "2つの文章" }
